@@ -9,19 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            Image(systemName: "globe")
-                .font(.largeTitle)
-                .padding(5)
-            Text("Hello, world!")
-                .font(.largeTitle)
-        }
-        .padding()
+        NameView()
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
