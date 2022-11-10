@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NameView()
+        MoodView()
     }
     
     struct ContentView_Previews: PreviewProvider {
