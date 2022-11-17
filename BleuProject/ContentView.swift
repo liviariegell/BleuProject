@@ -12,11 +12,10 @@ struct ContentView: View {
         NameView()
         MoodView()
     }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-            Text("Teste")
-        }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }

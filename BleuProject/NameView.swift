@@ -35,11 +35,10 @@ struct NameView: View {
 //            Text("Seu nome é \(username)")
         }
     }
-    
-    struct NameView_Previews: PreviewProvider {
-        static var previews: some View {
-            NameView()
-        }
+}
+
+struct NameView_Previews: PreviewProvider {
+    static var previews: some View {
+        NameView()
     }
-    
 }
