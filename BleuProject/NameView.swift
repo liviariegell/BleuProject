@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
-
 struct NameView: View {
     @State var username: String = ""
     var body: some View {
