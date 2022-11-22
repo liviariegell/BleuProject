@@ -1,41 +1,44 @@
-//
 //  NameView.swift
 //  BleuProject
-//
-//  Created by Ana Livia de Oliveira Riegel Machado on 10/11/22.
-//
+//  Visual da tela - concluído. (18.11)
 
 import SwiftUI
+
 
 struct NameView: View {
     @State var username: String = ""
     var body: some View {
-        VStack {
-            Text("Qual é o seu nome?")
-                .font(.largeTitle)
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color(red: 200/255, green: 215/255, blue: 249/255))
-            ZStack {
-                RoundedRectangle(cornerRadius: 75)
-                    .frame(width: 300, height: 100)
+        ZStack {
+            Image("nome")
+                .frame(width: 2, height: 2)
+            VStack {
+                Text("Qual é o seu nome?")
+                    .font(.custom("IBMPlexMono-Regular", size: 30))
+                    .multilineTextAlignment(.center)
                     .foregroundColor(Color(red: 200/255, green: 215/255, blue: 249/255))
-                HStack {
-                    Image("planet")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 48, height: 48)
-                    TextField("Digite aqui...", text: $username)
-                        .frame(width: 200, height: 100)
-                }.font(.largeTitle)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 75)
+                        .frame(width: 300, height: 80)
+                        .foregroundColor(Color(red: 200/255, green: 215/255, blue: 249/255))
+                    HStack {
+                        Image("planet")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 48, height: 48)
+                        TextField("Digite aqui...", text: $username)
+                            .font(.custom("IBMPlexMono-Regular", size: 20))
+                            .foregroundColor(Color(red: 1/255, green: 26/255, blue: 81/255))
+                            .frame(width: 200, height: 100)
+                    }.font(.title)
+                }
             }
-            
-//            Text("Seu nome é \(username)")
         }
     }
-}
-
+    
 struct NameView_Previews: PreviewProvider {
-    static var previews: some View {
-        NameView()
+        static var previews: some View {
+            NameView()
+        }
     }
+    
 }

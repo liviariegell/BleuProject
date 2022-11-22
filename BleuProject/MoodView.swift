@@ -1,9 +1,6 @@
-//
 //  MoodView.swift
 //  BleuProject
-//
-//  Created by Amanda do Nascimento Prudente Barros on 11/11/22.
-//
+//  Visual da tela - concluído. (18.11)
 
 import SwiftUI
 
@@ -13,7 +10,7 @@ struct MoodView: View {
             Image("mood")
             VStack {
                 Text("Como você está se sentindo hoje?")
-                    .font(.largeTitle)
+                    .font(.custom("IBMPlexMono-Regular", size: 30))
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color(red: 200/255, green: 215/255, blue: 249/255))
                 HStack {
@@ -45,11 +42,11 @@ struct MoodView: View {
                         
                     } label: {
                         RoundedRectangle(cornerRadius: 40)
-                            .frame(width: 280, height: 55)
+                            .frame(width: 280, height: 50)
                             .foregroundColor(Color(red: 200/255, green: 215/255, blue: 249/255))
                     }
                     Text("CONCLUÍDO")
-                        .font(.title2)
+                        .font(.custom("IBMPlexMono-Regular", size: 25))
                         .foregroundColor(Color(red: 1/255, green: 26/255, blue: 81/255))
                 }
             }
