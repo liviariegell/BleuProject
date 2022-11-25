@@ -38,7 +38,6 @@ struct MoodView: View {
                 }
                 ZStack {
                     Button {
-                        print("CONCLUÍDO")
                         
                     } label: {
                         RoundedRectangle(cornerRadius: 40)

@@ -29,18 +29,22 @@ struct Flores1View: View {
                     .position(x: 75, y: 90)
                     .foregroundColor(Color(red: 200/255, green: 215/255, blue: 249/255))
             }
-            VStack{
-                Image(systemName: "photo.on.rectangle")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 90, height: 30)
-                    .position(x: 320, y: 720)
-                    .foregroundColor(Color(red: 0/255, green: 17/255, blue: 77/255))
-             }
+            
+            ZStack{
+                Button {
+                    print("Upload button was tapped")
+                } label: {
+                    Image(systemName: "photo.on.rectangle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 90, height: 30)
+                        .foregroundColor(Color(red: 0/255, green: 17/255, blue: 77/255))
+                }
+            }.position(x: 310, y: 720)
+            
             
             ZStack {
                 Button {
-                    print("CONCLUÍDO")
                     
                 } label: {
                     RoundedRectangle(cornerRadius: 20)
@@ -52,14 +56,14 @@ struct Flores1View: View {
                     .foregroundColor(Color(red: 1/255, green: 26/255, blue: 81/255))
             } .position(x:205, y: 800)
             
-           }
-            
         }
         
     }
+    
+}
 
 struct Flores1View_Previews: PreviewProvider {
-                    static var previews: some View {
-                        Flores1View()
+    static var previews: some View {
+        Flores1View()
     }
 }

@@ -7,6 +7,8 @@ import SwiftUI
 
 struct NameView: View {
     @State var username: String = ""
+    
+    // Quando tiver um botao pra sair dessa tela com o nome do usuario, salvar o nome do usuario no UserDefaults
     var body: some View {
         ZStack {
             Image("nome")
@@ -19,7 +21,7 @@ struct NameView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 75)
                         .frame(width: 300, height: 80)
-                        .foregroundColor(Color(red: 200/255, green: 215/255, blue: 249/255))
+                        .foregroundColor(Color(red: 197/255, green: 214/255, blue: 255/255))
                     HStack {
                         Image("planet")
                             .resizable()
@@ -32,6 +34,17 @@ struct NameView: View {
                     }.font(.title)
                 }
             }
+            VStack {
+                Button("OK") {
+                        
+                }
+                .foregroundColor(Color(red: 0/255, green: 17/255, blue: 77/255))
+                .font(.custom("IBMPlexMono-Regular", size: 20))
+                .position(x: 200, y: 490)
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.capsule)
+                .tint(Color(red: 197/255, green: 214/255, blue: 255/255))
+                }
         }
     }
     
