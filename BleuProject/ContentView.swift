@@ -11,6 +11,10 @@ struct ContentView: View {
     var body: some View {
         NameView()
         MoodView()
+        FloresView()
+        InicialView()
+        Inicial1View()
+        TLineView()
     }
 }
 
